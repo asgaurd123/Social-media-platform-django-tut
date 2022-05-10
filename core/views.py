@@ -53,7 +53,7 @@ def signin(request):
             auth.login(request,user)
             return redirect('/')
         else:
-            message.info(request,"Credentails invalid")
+            messages.info(request,"Credentails invalid")
             return redirect('/signin')
     else:
         return render(request,'signin.html')
